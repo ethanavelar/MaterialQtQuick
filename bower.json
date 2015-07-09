@@ -1,0 +1,36 @@
+{
+  "name": "Material QT Documentation",
+  "version": "0.0.1",
+  "authors": [
+    "Ethan Taylor <etaylor1016@gmail.com>"
+  ],
+  "description": "Unoffical website for information on material for qtquick",
+  "keywords": [
+    "polymer",
+    "material",
+    "design",
+    "QT",
+    "Papyros"
+  ],
+  "license": "MIT",
+  "homepage": "ethantaylor.me",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#1.0.0",
+    "paper-button": "PolymerElements/paper-button#1.0.0",
+    "paper-header-panel": "PolymerElements/paper-header-panel#1.0.0",
+    "paper-icon-button": "PolymerElements/paper-icon-button#1.0.0",
+    "paper-menu": "PolymerElements/paper-menu#1.0.0",
+    "paper-toolbar": "PolymerElements/paper-toolbar#1.0.0",
+    "paper-fab": "PolymerElements/paper-fab#1.0.0",
+    "paper-tabs": "PolymerElements/paper-tabs#1.0.0",
+    "iron-pages": "PolymerElements/iron-pages#1.0.0",
+    "paper-item": "PolymerElements/paper-item#1.0.0"
+  }
+}

@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,100,300' rel='stylesheet' type='text/css'>
+		<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/main.js"></script>
+		<link rel="import" href="import.html">
+		<style>
+			html, body {
+				margin: 0px;
+				font-family: 'Roboto', sans-serif;
+			}
+			span.path {
+				margin-top: 20px;
+				margin-left: 20px;
+				font-size: 1em;
+				font-weight: 300;
+				display: inline-block;
+			}
+			span.title {
+				font-size: 1.6em;
+				position: absolute;
+				top: 95px;
+				left: 60px;
+			}
+			main.content {
+				width: 100%;
+				height: 2000px;
+			}
+			div.tab-menu {
+				width: 99.1vw;
+				height: 64px;
+				background-color: #1976D2;
+				z-index: 9;
+			}
+			img.center-img {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			img.header-img {
+				margin-top: 50px;
+			}
+			h1 {
+				padding-top: 100px;
+				font-weight: 300;
+				text-align: center;
+			}
+			h2 {
+				font-weight: 300;
+				text-align: center;
+				padding-top: 50px;
+			}
+			svg.about-img {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 30px;
+			}
+			footer div.bottom {
+				width: 100%;
+				height: 50px;
+				background-color: #757575;
+				position: relative;
+			}
+			footer div.top {
+				margin-top: 250px;
+				width: 100%;
+				height: 200px;
+				background-color: #9E9E9E;
+			}
+			p {
+				width: 50vw;
+				min-height: 100px;
+				font-weight: 300;
+				text-align: center;
+				margin: 0 auto;
+				padding-top: 35px;
+			}
+			div.list div span {
+				padding-left: 150px;
+				position: absolute;
+				left: 150px;
+				padding-right: 16px;
+				cursor: pointer;
+			}
+			div.list div {
+				position: relative;
+				width: 100%;
+				min-height: 10px;
+				padding-left: 16px;
+				padding-right: 16px;
+				padding-top: 18px;
+				padding-bottom: 18px;
+				cursor: pointer;
+			}
+			div.list div:first-child {
+				border-top-left-radius: 2px;
+				border-top-right-radius: 2px;
+			}
+			div.list div:hover {
+				background-color: #90CAF9;
+    			-webkit-transition: background-color 500ms linear;
+    			-moz-transition: background-color 500ms linear;
+    			-o-transition: background-color 500ms linear;
+    			-ms-transition: background-color 500ms linear;
+    			transition: background-color 500ms linear;
+			}
+			paper-material {
+				width: 1000px;
+				background-color: white;
+				margin: 0 auto;
+				padding-bottom: 8px;
+				margin-top: 50px;
+				position: relative
+			}
+			div.list {
+				width: 969px;
+				min-height: 200px;
+				position: relative;
+			}
+			a {
+				text-decoration: none;
+				color: black;	
+			}
+			@media screen and (max-width: 768px) {
+            	p {
+					width: 90vw;
+				}
+				img.header-img {
+					width: 300px;
+					height: 150px;
+				}
+				paper-material {
+					width: 100vw;
+				}
+				div.list {
+					width: 98vw;
+				}
+				div.list div span {
+					display: none;
+				}
+			}
+			@media screen and (max-width: 1000px) {
+            	p {
+					width: 90vw;
+				}
+				img.header-img {
+					width: 300px;
+					height: 150px;
+				}
+				paper-material {
+					width: 100vw;
+				}
+				div.list {
+					width: 95vw;
+				}
+			}
+		</style>
+		<style is="custom-style">
+			paper-toolbar.tall {
+				--paper-toolbar-background: #2196F3;
+			}
+			paper-tabs {
+				height: 64px;
+				color: white;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<paper-toolbar class="tall">
+				<span class="path">Material For QtQuick > About</span>
+  				<span class="title">Material For QtQuick</span>
+		</paper-toolbar>
+		<div class="tab-menu">
+			<paper-tabs selected="0" scrollable>
+  				<paper-tab class="about">About</paper-tab>
+  				<paper-tab class="docs">Developer Docs</paper-tab>
+  				<paper-tab class="involved">Get Involved</paper-tab>
+				<paper-tab class="download">Download</paper-tab>
+				<paper-tab class="support">Support</paper-tab>
+			</paper-tabs>
+		</div>
+		<main class="content">
+				<section id="about">
+					<h1>About Material For QtQuick</h1>
+					<img class="center-img header-img" src="img/develop_cross_platform.jpg" width="1150px" height="550px;">
+					<h2>Power of QtQuick</h2>
+					 <svg class="about-img" style="width:200px;height:200px" viewBox="0 0 24 24">
+                    <path fill="#000000" d="M13.18,14.5C12.53,15.26 11.47,15.26 10.82,14.5L7.44,10.5C7.16,11.28 7,12.12 7,13C7,14.67 7.57,16.18 8.5,17.27C10,17.37 11.29,17.96 11.78,19C11.85,19 11.93,19 12.22,19C12.71,18 13.95,17.44 15.46,17.33C16.41,16.24 17,14.7 17,13C17,12.12 16.84,11.28 16.56,10.5L13.18,14.5M20,20.75C20,21.3 19.3,22 18.75,22H13.25C12.7,22 12,21.3 12,20.75C12,21.3 11.3,22 10.75,22H5.25C4.7,22 4,21.3 4,20.75C4,19.45 4.94,18.31 6.3,17.65C5.5,16.34 5,14.73 5,13C4,15 2.7,15.56 2.09,15C1.5,14.44 1.79,12.83 3.1,11.41C3.84,10.6 5,9.62 5.81,9.25C6.13,8.56 6.54,7.93 7,7.38V7A5,5 0 0,1 12,2A5,5 0 0,1 17,7V7.38C17.46,7.93 17.87,8.56 18.19,9.25C19,9.62 20.16,10.6 20.9,11.41C22.21,12.83 22.5,14.44 21.91,15C21.3,15.56 20,15 19,13C19,14.75 18.5,16.37 17.67,17.69C19.05,18.33 20,19.44 20,20.75M9.88,9C9.46,9.5 9.46,10.27 9.88,10.75L11.13,12.25C11.54,12.73 12.21,12.73 12.63,12.25L13.88,10.75C14.29,10.27 14.29,9.5 13.88,9H9.88M10,5.25C9.45,5.25 9,5.9 9,7C9,8.1 9.45,8.75 10,8.75C10.55,8.75 11,8.1 11,7C11,5.9 10.55,5.25 10,5.25M14,5.25C13.45,5.25 13,5.9 13,7C13,8.1 13.45,8.75 14,8.75C14.55,8.75 15,8.1 15,7C15,5.9 14.55,5.25 14,5.25Z" />
+                    </svg>
+					<p>With the Material framework for QtQuick, you can build powerful and well-designed cross-platform apps that run on Papyros and other Linux operating systems, OS X, Windows, and Android. You can create convergent apps that adapt to a wide variety of device sizes and input methods.</p>
+					<h2>Material Design</h2>
+					<svg class="about-img" style="width:200px;height:200px" viewBox="0 0 24 24">
+                    <path fill="#000000" d="M12,16L19.36,10.27L21,9L12,2L3,9L4.63,10.27M12,18.54L4.62,12.81L3,14.07L12,21.07L21,14.07L19.37,12.8L12,18.54Z" />
+                    </svg>
+                	<p>Our framework is built exactly according to the Material Design specifications. This means that apps built with the framework will fit in on Android and will look good on other platforms. You can also use the QtQuick.Controls theme to adapt existing apps without rewriting from scratch.</p>
+					<h2>Open Source</h2>
+					<svg class="about-img" style="width:200px;height:200px" viewBox="0 0 24 24">
+                    <path fill="#000000" d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+                    </svg>
+                	<p>The Material framework is open source and is licensed under the LGPL version 2.1 or higher. This means you have full access to the source code on our GitHub page. You can choose to publish your app under a compliant open-source license, or choose to keep it closed source.</p>
+				</section>
+				<section id="docs">
+					<h1>Developer Docs</h1>
+					<paper-material elevation="1">
+						
+						<div class="list">
+	          				<div>Action<span>Represents an action shown in an action bar, context menu, or list</span></div>
+	          				<div>Action Bar<span>An action bar holds the title and actions displayed in the application toolbar</span></div>
+	          				<div>Action Button<span>A floating action button</span></div>
+	          				<div>App Theme<span>A helper class used in ApplicationWindow to set your app's theme colors</span></div>
+							<div>App Window<span>A window that provides features commonly used for Material Design apps</span></div>
+							<div>Awesome Icon<span>Displays an icon from the FontAwesome icon collection</span></div>
+							<div>Base List Item<span>Base class for list items</span></div>
+							<div>Bottom Action Sheet<span>Represents a bottom sheet displaying a list of actions with an optional title</span></div>
+							<div>Bottom Sheet<span>A bottom sheet is a sheet of paper that slides up from the bottom edge of the screen and presents a set of clear and simple actions</span></div>
+							<div>Button<span>A push button with a text label</span></div>
+							<div>Card<span>A card is a piece of paper with unique related data that serves as an entry point to more detailed information</span></div>
+							<div>Check Box<span>Checkboxes allow the user to select multiple options from a set</span></div>
+							<div>Device<span>A singleton that provides information about the current device</span></div>
+							<div>Dialog<span>Dialogs inform users about critical information, require users to make decisions, or encapsulate multiple tasks within a discrete process</span></div>
+							<div>Divider<span>A divider divides content in a list</span></div>
+							<div>Dropdown<span>Represents a dropdown menu that can display a variety of content</span></div>
+							<div>Icon<span>Displays an icon from the Material Design and FontAwesome icon collections</span></div>
+							<div>Icon Button<span>Icon buttons are appropriate for app bars, toolbars, action buttons or toggles</span></div>
+							<div>Ink<span>Represents a ripple ink animation used in buttons and many other components</span></div>
+							<div>Input Dialog<span>A dialog with a single text field input</span></div>
+							<div>Label<span>A text label with many different font styles from Material Design</span></div>
+							<div>Main View<span>A root component with support for overlays and configuring the app theme</span></div>
+							<div>Material Animation<span>A singleton with common animation durations</span></div>
+							<div>Menu Field<span>A input field similar to a text field but that opens a dropdown menu</span></div>
+							<div>Navigation Drawer<span>Navigation drawer slides in from the left and is a common pattern in apps</span></div>
+							<div>Object<span>A base class for non-visual objects</span></div>
+							<div>Overlay Layer<span>Provides a layer to display popups and other overlay components</span></div>
+							<div>Overlay View<span>A view that pops out of the content to display as an overlay</span></div>
+							<div>Page<span>Represents a page on the navigation page stack</span></div>
+							<div>Page Sidebar<span>Represents a split sidebar in a page, with its own title, actions, and color in the action bar</span></div>
+							<div>Page Stack<span>Manages the page stack used for navigation</span></div>
+							<div>Palette<span>Provides access to the Material Design color palette</span></div>
+							<div>Popover<span>A tooltip is a label that appears on hover and explains a non-text UI element</span></div>
+							<div>Popup Base<span>A base class for popups such as dialogs or dropdowns</span></div>
+							<div>Progress Bar<span>Visual indicator of progress in some operation</span></div>
+							<div>Progress Circle<span>Visual circular indicator of progress in some operation</span></div>
+							<div>Radio Button<span>Radio buttons allow the user to select one option from a set</span></div>
+							<div>Scrollbar<span>Scrollbars show scrolling progress for listviews and flickables</span></div>
+							<div>Section Header<span>A list item that serves as the the header for an expandable list section</span></div>
+							<div>Sidebar<span>A sidebar component for use in adaptive layouts</span></div>
+							<div>Simple Menu<span>A list item that opens a dropdown menu when tapped</span></div>
+							<div>Slider<span>Sliders let users select a value from a continuous or discrete range of values by moving the slider thumb</span></div>
+							<div>Snackbar<span>Snackbars provide lightweight feedback about an operation</span></div>
+							<div>Standard<span>A simple list item with a single line of text and optional primary and secondary actions</span></div>
+							<div>Subheader<span>Subheaders are special list tiles that delineate distinct sections of a list or grid list</span></div>
+							<div>Subtitled<span>A list item with a two or three lines of text and optional primary and secondary actions</span></div>
+							<div>Switch<span>On/off switches toggle the state of a single settings option</span></div>
+							<div>Tab View<span>A container for displaying tabs in a page</span></div>
+							<div>Tabs<span>Provides a tab bar for use in the toolbar</span></div>
+							<div>Text Field<span>A single-line text input control</span></div>
+							<div>Theme<span>Provides access to standard colors that follow the Material Design specification</span></div>
+							<div>Theme Palette<span>Provides access to standard colors that follow the Material Design specification, but specifically designed for light or dark surfaces</span></div>
+							<div>Thin Divider<span>A 1dp high divider for use in lists and other columns of content</span></div>
+							<div>Time Picker<span><i>No description provided.</i></span></div>
+							<div>Time Picker Dialog<span><i>No description provided.</i></span></div>
+							<div>Toolbar<span>Provides the container used to hold the action bar of pages</span></div>
+							<div>Tooltip<span>A tooltip is a label that appears on hover and explains a non-text UI element</span></div>
+							<div>Units<span>Provides access to screen-independent Units known as DPs (device-independent pixels)</span></div>
+							<div>View<span>Provides a base view component, with support for Material Design elevation, background colors, and tinting</span></div>
+							<div>Wave<span>Provides a wave animation for transitioning between views of content</span></div>
+							<div>Window<span>A subclass of QtQuick.Window that provides some additional features for developing Applications that conform to Material Design</span></div>
+	        			</div>
+					</paper-material>
+				</section>
+				<section id="involved">
+					<h1>Get Involved</h1>
+					<div class="container3">
+						<h2>Funding</h2>
+						<p>Papyros currently has no commercial funding, and development is done by team members and third-party contributors in their spare time. With continual funding, the Papyros team will be able to dedicate more time to working on Papyros as well as pay third-party contributors to work on features and bugs through the use of bug bounties. This will allow me, Michael Spencer, to spend more time as the lead developer building new features of the OS, getting the alpha ready for testing, and working towards stable releases of the operating system. It will also encourage more third-party contributors to get involved with development of the OS.</p>
+						<div horizontal layout>
+							<div>
+								<h2 class="side">General Funding</h2>
+								<p>You can support our ongoing crowdfunding campaign on Bountysource Salt. Choose an amount, get rewards, and help us reach our goals. <a href="#">View our sponsors ></a>
+							</div>
+							<div>
+								<h2 class="side">Targetted Funding</h2>
+								<p>Bountysource puts funds directly in the hands of developers by rewarding them for committing fixes or creating new features. Set a bounty on the issues that matter to you most or fund a specific app or project. You can also set up a recurring subscription</p>
+							</div>
+						</div>
+					</div>
+					<section class="subsection">
+						
+					</section>
+				</section>
+				<section id="download">
+					<h1>Download</h1>
+					<p>download content</p>
+				</section>
+				<section id="support">
+					<h1>Support</h1>
+					<p>support content</p>
+				</section>
+		</main>
+		<!--<footer>
+			<div class="top">
+				
+			</div>
+			<div class="bottom">
+				
+			</div>
+		</footer>-->
+	</body>
+</html>
