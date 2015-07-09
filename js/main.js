@@ -11,59 +11,36 @@ $(document).ready(function(){
     $('.tab-menu').css({ 'box-shadow': 'none'});  
   } 
 });
-$('#docs').hide();
-$('#involved').hide();
-$('#download').hide();
-$('#support').hide();
 
-$(".about").click(function() {
-  $("#about").show();
-  $("#docs").hide();
-  $("#involved").hide();
-  $("#download").hide();
-  $("#support").hide();
-  $('.path').html("Material For QtQuick > About");
-});
+function hideall() {
+  $('#about').hide();$('#docs').hide();$('#involved').hide();$('#download').hide();$('#support').hide();
+}
+hideall();
+$('#about').show();
 
-$(".docs").click(function() {
-  $("#about").hide();
-  $("#docs").show();
-  $("#involved").hide();
-  $("#download").hide();
-  $("#support").hide();
-  $('.path').html("Material For QtQuick > Developer Docs");
-});
+$('paper-tab').click(function() {
+  var myClass = $(this).attr("class");
+  var tab = myClass.split(' ')[0];
+  hideall();
 
-$(".involved").click(function() {
-  $("#about").hide();
-  $("#docs").hide();
-  $("#involved").show();
-  $("#download").hide();
-  $("#support").hide();
-  $('.path').html("Material For QtQuick > Get Involved");
+  if(tab == 'about') {
+    $("#about").show();
+    console.log('about is true');
+  } else if(tab == 'docs') {
+    $("#docs").show();
+    console.log('docs is true');
+  } else if(tab == 'involved') {
+    $("#involved").show();
+    console.log('involved is true')
+  } else if(tab == 'download') {
+    $('#download').show();
+    console.log('download is true')
+  } else if(tab == 'support') {
+    $('#support').show();
+    console.log('They are all true!');
+  }
 });
 
-$(".download").click(function() {
-  $("#about").hide();
-  $("#docs").hide();
-  $("#involved").hide();
-  $("#download").show();
-  $("#support").hide();
-  $('.path').html("Material For QtQuick > Download");
-});
-
-$(".support").click(function() {
-  $("#about").hide();
-  $("#docs").hide();
-  $("#involved").hide();
-  $("#download").hide();
-  $("#support").show();
-  $('.path').html("Material For QtQuick > Support");
-});
-$('.action', '.actionbar', '.actionbutton', '.apptheme', '.appwindow', '.awesomeicon', '.baselistitem', '.bottomactionsheet', '.bottomsheet', '.button', '.card').hide();
-$('').click(function() {
-  
-});
 
 
 
