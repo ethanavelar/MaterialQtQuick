@@ -21,7 +21,7 @@ function hideall() {
 }
 hideall();
 $('#about').show();
-
+$('.back').hide();
 $('paper-tab').click(function() {
   var myClass = $(this).attr("class");
   var tab = myClass.split(' ')[0];
@@ -43,6 +43,15 @@ $('paper-tab').click(function() {
     $('#support').show();
     $('.path').html('Material For QtQuick > Support');
   }
+});
+
+$('.list div').click(function() {
+  $('.list').children().stop().fadeOut();
+  $('.back').stop().fadeIn();
+  $('.back').click(function() {
+    $('.list').children().stop().fadeIn();
+    $('.back').stop().fadeOut();
+  });
 });
 
 
